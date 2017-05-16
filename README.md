@@ -1,7 +1,7 @@
 # Meteo mobile application
 ## ionic meteo mobile application
 
-This repo contain a cross platform meteo mobile application written in AngularJS using [ionic framework](https://ionicframework.com/). Meteo informations are retrieved using openweather. The mobile application actually work only with French cities, but could be modified to any country. To do this easily, you could overwrite app/www/ressource/Unique_cities2.json with a similiar json file containing desired cities.
+This repo contains a cross platform meteo mobile application written in AngularJS using [ionic framework](https://ionicframework.com/). Meteo informations are retrieved using openweather. The mobile application actually works only with French cities, but could be modified to any country. To do this easily, you could overwrite app/www/ressource/Unique_cities2.json with a similiar json file containing desired cities.
 
 #### Dependancies
 - ionic
@@ -16,12 +16,12 @@ This repo contain a cross platform meteo mobile application written in AngularJS
 
         $ ionic serve
 
-In order to get a closer feeling of a mobile user experience, I highly suggest that you set the adaptative view option from chrome developement tools if you choose to render the app this way. More information about how to do so could be found [here](https://www.sitepoint.com/how-to-simulate-mobile-devices-with-device-mode-in-chrome/)
+In order to get a closer feeling of a mobile user experience, I strongly suggest that you set the adaptative view option from chrome developement tools if you choose to render the app this way. More information about how to do so could be found [here](https://www.sitepoint.com/how-to-simulate-mobile-devices-with-device-mode-in-chrome/)
 
 #### Test the app on any platform (ios,android,windows phone)
 
 Depending on your platform you may need to install platform related sdk.
-replace the <platform> in code below by ios, android or windows
+Replace the <platform> in code below by ios, android or windows
         
         $ ionic plugin add ionic-plugin-keyboard
         $ ionic platform add <platform>

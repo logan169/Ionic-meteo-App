@@ -5,10 +5,14 @@ This repo contain a cross platform meteo mobile application written in AngularJS
 
 #### Dependancies
 - ionic
-$ sudo npm install -g ionic
+
+#### Install ionic and meteo App
+
+        $ sudo npm install -g ionic
+        $ git clone git@github.com:logan169/Ionic-meteo-App.git
+        $ cd ./meteoApp
 
 #### Test the app (Browser)
-After installing dependencies, type the following commands from meteoApp folder:
 
         $ ionic serve
 

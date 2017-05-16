@@ -1,0 +1,23 @@
+
+<ion-view>
+  <ion-nav-title>Météo: {{city}}, France</ion-nav-title>
+  <!-- if city in db-->
+  <ion-content>
+
+
+    <ion-item ng-if="cityDefined"  ng-repeat="item in prevision.list" class="row" ng-class="{row_active: $index==0}" ng-click='getfp(item)'>
+
+      <div class="temperature">{{Math.round(item.temp.day)}}°C</div>
+      <div class="date" >
+        <strong>{{item.day}}</strong>
+        {{item.dt*1000 | date:'dd/MM'}}
+      </div>
+      <!--display wind!-->
+      <!--
+      <div class="wind">Vent: {{item.speed}} Km/h </div>
+      !-->
+      <i class="icon-{{item.weather[0].main.toLowerCase() }}"></i>
+
+    </ion-item>
+  </ion-content>
+</ion-view>

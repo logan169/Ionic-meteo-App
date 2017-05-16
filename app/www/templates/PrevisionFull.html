@@ -1,0 +1,58 @@
+<ion-view>
+  <ion-nav-title>
+    Météo: {{item.city}}, France :
+    <strong>{{item.day}}</strong>
+    {{item.dt*1000 | date:'dd/MM'}}
+  </ion-nav-title>
+
+
+  <ion-content>
+    <ion-item class="row_active">
+      <div>
+        <strong>{{item.day}}</strong>
+        {{item.dt*1000 | date:'dd/MM'}}
+      </div>
+      <div class="temperature">{{Math.round(item.temp.day)}}°C</div>
+      <i class="icon-{{item.weather[0].main.toLowerCase() }}"></i>
+    </ion-item>
+
+    <!--Temperature-->
+    <div>
+    <ion-item class="row"> <div class="prevfull"><strong> -----Temperature----- </strong></div></ion-item>
+    <ion-item class="row"> <div class="prevfull">Moyenne: {{item.temp.day}} °C</div></ion-item>
+    <ion-item class="row"> <div class="prevfull">Max: {{item.temp.max}} °C</div></ion-item>
+    <ion-item class="row"> <div class="prevfull">Min: {{item.temp.min}} °C</div></ion-item>
+    <ion-item class="row"> <div class="prevfull">Matin: {{item.temp.morn}} °C</div></ion-item>
+    <ion-item class="row"> <div class="prevfull">Midi: {{item.temp.eve}} °C</div></ion-item>
+    <ion-item class="row"> <div class="prevfull">soir: {{item.temp.night}} °C</div></ion-item>
+    </div>
+
+    <!--Vent-->
+    <div>
+    <ion-item class="row"> <div class="prevfull"><strong> -----Vent----- </strong></div></ion-item>
+    <ion-item class="row"> <div class="prevfull"> {{item.speed}} Km/h </div></ion-item>
+    </div>
+
+    <!--Pluie-->
+    <div ng-if="item.rain">
+      <ion-item class="row"> <div class="prevfull"><strong> -----Pluie----- </strong></div></ion-item>
+      <ion-item class="row"> <div class="prevfull"> {{item.rain}} mm </div></ion-item>
+    </div>
+
+    <!--Humidité-->
+    <div>
+    <ion-item class="row"> <div class="prevfull"><strong> -----Humidité----- </strong></div></ion-item>
+    <ion-item class="row"> <div class="prevfull"> {{item.humidity}} % </div></ion-item>
+    </div>
+
+    <!--Pression-->
+    <div>
+    <ion-item class="row"> <div class="prevfull"><strong> -----Pression----- </strong></div></ion-item>
+    <ion-item class="row"> <div class="prevfull"> {{item.pressure}} kPa </div></ion-item>
+    </div>
+
+  </ion-content>
+
+
+
+</ion-view>

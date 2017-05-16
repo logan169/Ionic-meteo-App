@@ -1,0 +1,24 @@
+
+<ion-view view-title="Chercher votre ville" >
+  <ion-content class="padding">
+
+    <div class="bar bar-header item-input-inset">
+      <label class="item-input-wrapper">
+        <i class="icon ion-ios-search placeholder-icon"></i>
+        <input class="sbox" type="search" placeholder="Entrez le nom d'une ville ou séléctionez une ville dans la liste" ng-model="city">
+      </label>
+      <button class="button button-positive" ng-click="search(city)">
+        Chercher
+      </button>
+    </div>
+
+    <ul class="list ">
+      <ion-item collection-repeat="item in cities | orderBy:['name'] | filter: city" ng-click="search(item)" class="row_list">
+        {{item}}
+      </ion-item>
+    </ul>
+
+  </ion-content>
+</ion-view>
+
+
